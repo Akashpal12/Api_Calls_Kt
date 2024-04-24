@@ -1,32 +1,33 @@
 package com.school.apicallskt.retrofit_java.activity;
 
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.school.apicallskt.R;
-import com.school.apicallskt.databinding.ActivityPostJvBinding;
+import com.school.apicallskt.databinding.ActivityPostJvActtivityBinding;
+import com.school.apicallskt.retrofit_java.model.PostJvModel;
 import com.school.apicallskt.retrofit_java.RetrofitClientJv;
+import com.school.apicallskt.retrofit_java.adapter.PostJvAdapter;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PostJvActivity extends AppCompatActivity {
-    ActivityPostJvBinding binding;
+    ActivityPostJvActtivityBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityPostJvBinding.inflate(getLayoutInflater());
+        binding = ActivityPostJvActtivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         EdgeToEdge.enable(this);
@@ -36,21 +37,24 @@ public class PostJvActivity extends AppCompatActivity {
             return insets;
         });
 
-        RetrofitClientJv.getClient().getPosts().enqueue(new Callback<JsonArray>() {
+        RetrofitClientJv.getClient().getPostsList().enqueue(new Callback<List<PostJvModel>>() {
             @Override
-            public void onResponse(Call<JsonArray> call, Response<JsonArray> response) {
+            public void onResponse(Call<List<PostJvModel>> call, Response<List<PostJvModel>> response) {
                 if (response.isSuccessful()){
-                    JsonArray jsonArray = response.body();
-                    Toast.makeText(PostJvActivity.this, ""+jsonArray, Toast.LENGTH_SHORT).show();
+                    List<PostJvModel> postJvModelList=response.body();
+                    if (!postJvModelList.isEmpty()){
+                        binding.recylerView.setLayoutManager(new LinearLayoutManager(PostJvActivity.this, RecyclerView.VERTICAL,false));
+                        binding.recylerView.setAdapter(new PostJvAdapter(PostJvActivity.this,postJvModelList));
+                    }
                 }
+
             }
 
             @Override
-            public void onFailure(Call<JsonArray> call, Throwable t) {
+            public void onFailure(Call<List<PostJvModel>> call, Throwable t) {
 
             }
         });
-
 
     }
 
