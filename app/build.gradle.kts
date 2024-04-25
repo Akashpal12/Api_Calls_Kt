@@ -51,5 +51,7 @@ dependencies {
     // Retrofit Dependencies
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+    // Volley Dependecies
+    implementation(libs.volley)
 
 }

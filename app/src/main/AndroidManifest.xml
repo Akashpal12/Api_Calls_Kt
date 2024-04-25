@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".volley_java.VolleyPostJvActivity"
+            android:exported="false" />
+        <activity
+            android:name=".volley_kotlin.VolleyPostKtActivity"
+            android:exported="false" />
+        <activity
             android:name=".retrofit_kotlin.activity.SinglePostKtActivity"
             android:exported="false" />
         <activity

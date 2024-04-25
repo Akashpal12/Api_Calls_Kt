@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.school.apicallskt.databinding.ActivityMainBinding
 import com.school.apicallskt.retrofit_java.activity.PostJvActivity
 import com.school.apicallskt.retrofit_kotlin.activity.PostKTActivity
+import com.school.apicallskt.volley_kotlin.VolleyPostKtActivity
 
 class MainActivity : AppCompatActivity() {
       lateinit var binding: ActivityMainBinding
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         binding.java.setOnClickListener {
             val intent=Intent(this,
                 PostJvActivity::class.java)
+            startActivity(intent)
+        }
+        binding.vKotlin.setOnClickListener {
+            val intent=Intent(this,
+                VolleyPostKtActivity::class.java)
             startActivity(intent)
         }
     }

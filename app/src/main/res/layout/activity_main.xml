@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Kotlin Apis"
+        android:text=" Retrofit Kotlin Apis"
         android:textStyle="bold" />
 
     <Button
@@ -30,7 +30,23 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:text="Java Apis"
+        android:text=" Retrofit Java Apis"
        />
+
+    <Button
+        android:id="@+id/v_java"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text=" Volley Java Apis"
+        />
+ <Button
+        android:id="@+id/v_kotlin"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text=" Volley Kotlin Apis"
+        />
+
 
 </LinearLayout>
