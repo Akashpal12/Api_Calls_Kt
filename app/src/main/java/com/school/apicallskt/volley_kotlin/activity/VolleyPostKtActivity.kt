@@ -1,4 +1,4 @@
-package com.school.apicallskt.volley_kotlin
+package com.school.apicallskt.volley_kotlin.activity
 
 import android.os.Bundle
 import android.widget.Toast
@@ -10,11 +10,8 @@ import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import com.school.apicallskt.R
 import com.school.apicallskt.retrofit_kotlin.model.PostKtModel
-import org.json.JSONArray
-import org.json.JSONException
 
 
 class VolleyPostKtActivity : AppCompatActivity() {

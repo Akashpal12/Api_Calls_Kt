@@ -1,4 +1,4 @@
-package com.school.apicallskt.volley_java;
+package com.school.apicallskt.volley_java.activity;
 
 import android.os.Bundle;
 

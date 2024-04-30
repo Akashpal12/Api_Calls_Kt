@@ -48,5 +48,19 @@
         android:text=" Volley Kotlin Apis"
         />
 
+    <Button
+        android:id="@+id/Sq_lite_java"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="Sq Lite Java"
+        />
+    <Button
+        android:id="@+id/Sq_lite_kt"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="Sq Lite Kotlin"
+        />
 
 </LinearLayout>
