@@ -11,20 +11,20 @@ abstract class CourseDatabaseKt : RoomDatabase() {
     abstract fun courseDao(): CourseDaoKt
 
     companion object {
+        @Volatile
         private var instance: CourseDatabaseKt? = null
 
         @Synchronized
-        fun getInstance(ctx: Context): CourseDatabaseKt {
-            return instance ?: synchronized(this) {
-                val newInstance = Room.databaseBuilder(
-                    ctx.applicationContext,
-                    CourseDatabaseKt::class.java,
-                    "course_database_kotlin"
-                ).fallbackToDestructiveMigration().build()
-
-                instance = newInstance
-                newInstance
+        fun getInstance(context: Context): CourseDatabaseKt {
+            if (instance == null) {
+                instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    CourseDatabaseKt::class.java, "c"
+                ).fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
+                    .build()
             }
+            return instance!!
         }
     }
 }

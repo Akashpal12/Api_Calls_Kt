@@ -11,5 +11,5 @@ data class CourseRoomKtModel(
     var courseDescription: String? = null
 ) {
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0
+    var id: Int = 0
 }

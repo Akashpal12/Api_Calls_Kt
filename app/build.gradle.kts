@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.androidServices)
+
 }
 
 android {
@@ -56,5 +58,8 @@ dependencies {
     //Room Db
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
+
+    // firebase
+    implementation(libs.firebase.bom)
 
 }
