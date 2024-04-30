@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.school.apicallskt.databinding.ActivityMainBinding
 import com.school.apicallskt.retrofit_java.activity.PostJvActivity
 import com.school.apicallskt.retrofit_kotlin.activity.PostKTActivity
+import com.school.apicallskt.roomDb_java.activity.RoomActivity
 import com.school.apicallskt.sqLite_java.activity.SqLiteJvActivity
 import com.school.apicallskt.sqLite_kotlin.activity.SqLiteKtActivity
 import com.school.apicallskt.volley_kotlin.activity.VolleyPostKtActivity
@@ -50,6 +51,11 @@ class MainActivity : AppCompatActivity() {
         binding.SqLiteKt.setOnClickListener {
             val intent=Intent(this,
                 SqLiteKtActivity::class.java)
+            startActivity(intent)
+        }
+        binding.roomDbJv.setOnClickListener {
+            val intent=Intent(this,
+                RoomActivity::class.java)
             startActivity(intent)
         }
     }

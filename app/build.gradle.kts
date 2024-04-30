@@ -53,5 +53,8 @@ dependencies {
     implementation (libs.converter.gson)
     // Volley Dependecies
     implementation(libs.volley)
+    //Room Db
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
 
 }
