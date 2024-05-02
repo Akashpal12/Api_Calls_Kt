@@ -16,10 +16,142 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".firebase_kotlin.notifications.ALlTypeNotificationActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.notifications.ALlTypeNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map_java.live_tracking.LiveTrackingJava"
+            android:exported="false" />
+        <activity
+            android:name=".map_kotlin.live_tracking.LiveTrackingKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".map_kotlin.live_location_map.LiveLocationKoltin"
+            android:exported="false" />
+        <activity
+            android:name=".map_java.live_location_map.LiveLocationJava"
+            android:exported="false" />
+        <activity
+            android:name=".map_java.foreground.ForegroundActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".map_kotlin.foreground.ForegroundActivityKoltin"
+            android:exported="false" />
+        <activity
+            android:name=".map_kotlin.circle_ractangle_triangle_inside_plots.AllTypePlot_Inside_Outside_CheckKt"
+            android:exported="false" />
+        <activity
+            android:name=".map_java.circle_ractangle_triangle_inside_plots.AllTypePlot_Inside_Outside_Check"
+            android:exported="false" />
+        <activity
+            android:name=".map_java.broadcast_reciever.BroadCastActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".map_kotlin.broadcast_reciever.BroadCastActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".map_kotlin.background_service.BackGroundActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".map_java.background_service.BackGroundActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".mvp_java.MvpActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".mvp_kotlin.MvpActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".permission_java.version_permissions.AllTypePermissionJava"
+            android:exported="false" />
+        <activity
+            android:name=".permission_kotlin.version_permissions.AllTypePermissionKoltin"
+            android:exported="false" />
+        <activity
+            android:name=".permission_java.sharing_folder.FolderShareActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".permission_kotlin.sharing_folder.FolderShareActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".permission_kotlin.normal_permission.NormalPermissionKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".permission_java.normal_permission.NormalPermissionJava"
+            android:exported="false" />
+        <activity
+            android:name=".permission_java.directroy_folder.DirectoryActivityjava"
+            android:exported="false" />
+        <activity
+            android:name=".permission_kotlin.directroy_folder.DirectoryActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm_java.MvvmActivityJava"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm_kotlin.MvvmActivityKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".shared_preferences_kotlin.SharedPreferencesActivityKt"
+            android:exported="false" />
+        <activity
+            android:name=".shared_preferences_java.SharedPreferencesActivityJv"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.ml_kit.MachineLearningKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.ml_kit.MachineLearningJava"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.firebase_database.FirebaseDatabaseKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.firebase_database.FirebaseDatabaseJava"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.real_time_database.RealTimeDbJava"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.real_time_database.RealTimeDbKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.storage.FirebaseStorageKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.storage.FirebaseStorageJava"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.authentication.facebook.FacebookAuthJava"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.authentication.facebook.FacebookAuthKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.authentication.google.GoogleAuthKotlin"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.authentication.google.GoogleAuthJava"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.authentication.otp.FirebaseOtpKt"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.authentication.otp.FirebaseOtpJv"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_kotlin.FirebaseDashbourdActivityKt"
+            android:exported="false" />
+        <activity
+            android:name=".firebase_java.FirebaseDashbourdJv"
+            android:exported="false" />
+        <activity
             android:name=".room_db_kotlin.RoomDbKtActivity"
             android:exported="false" />
         <activity
-            android:name=".roomDb_java.activity.RoomActivity"
+            android:name=".room_db_java.activity.RoomActivity"
             android:exported="false" />
         <activity
             android:name=".sqLite_java.activity.SqLiteJvActivity"
@@ -41,9 +173,6 @@
             android:exported="false" />
         <activity
             android:name=".retrofit_java.activity.SInglePostJvActivity"
-            android:exported="false" />
-        <activity
-            android:name=".retrofit_java.activity.SinglePostJvActivity"
             android:exported="false" />
         <activity
             android:name=".retrofit_java.activity.PostJvActivity"

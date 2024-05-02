@@ -2,7 +2,6 @@ package com.school.apicallskt.room_db_kotlin
 
 import CourseDatabaseKt
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,23 +17,21 @@ import kotlinx.coroutines.launch
 class RoomDbKtActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRoomDbKtBinding
     private lateinit var courseDatabase: CourseDatabaseKt
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityRoomDbKtBinding.inflate(layoutInflater)
         setContentView(binding.root)
         enableEdgeToEdge()
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        try {
-            courseDatabase = CourseDatabaseKt.getInstance(this)
-        } catch (e: Exception) {
-            Log.d("Exception", ""+e)
-        }
 
+        courseDatabase = CourseDatabaseKt.getInstance(this)
 
         binding.idBtnAddCourse.setOnClickListener {
             val courseName = binding.idEdtCourseName.text.toString().trim()

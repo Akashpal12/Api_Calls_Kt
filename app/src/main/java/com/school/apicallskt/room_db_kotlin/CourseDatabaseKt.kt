@@ -14,17 +14,23 @@ abstract class CourseDatabaseKt : RoomDatabase() {
         @Volatile
         private var instance: CourseDatabaseKt? = null
 
-        @Synchronized
         fun getInstance(context: Context): CourseDatabaseKt {
-            if (instance == null) {
-                instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    CourseDatabaseKt::class.java, "c"
-                ).fallbackToDestructiveMigration()
-                    .allowMainThreadQueries()
-                    .build()
+            return instance ?: synchronized(this) {
+                instance ?: try {
+                    buildDatabase(context).also { instance = it }
+                } catch (ex: Exception) {
+                    ex.printStackTrace()
+                    throw ex
+                }
             }
-            return instance!!
+        }
+        private fun buildDatabase(context: Context): CourseDatabaseKt {
+            return Room.databaseBuilder(
+                context.applicationContext,
+                CourseDatabaseKt::class.java,
+                "course_database"
+            ).fallbackToDestructiveMigration().allowMainThreadQueries()
+                .build()
         }
     }
 }

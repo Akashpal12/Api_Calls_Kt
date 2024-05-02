@@ -60,6 +60,11 @@ dependencies {
     annotationProcessor(libs.androidx.room.compiler)
 
     // firebase
-    implementation(libs.firebase.bom)
+    implementation(platform(libs.firebase.bom))
+
+    //firebase realtime database
+    //noinspection UseTomlInstead
+    implementation("com.google.firebase:firebase-database")
+
 
 }

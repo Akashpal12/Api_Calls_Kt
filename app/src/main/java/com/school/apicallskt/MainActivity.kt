@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.school.apicallskt.databinding.ActivityMainBinding
 import com.school.apicallskt.retrofit_java.activity.PostJvActivity
 import com.school.apicallskt.retrofit_kotlin.activity.PostKTActivity
-import com.school.apicallskt.roomDb_java.activity.RoomActivity
+import com.school.apicallskt.room_db_java.activity.RoomActivity
 import com.school.apicallskt.room_db_kotlin.RoomDbKtActivity
 import com.school.apicallskt.sqLite_java.activity.SqLiteJvActivity
 import com.school.apicallskt.sqLite_kotlin.activity.SqLiteKtActivity
