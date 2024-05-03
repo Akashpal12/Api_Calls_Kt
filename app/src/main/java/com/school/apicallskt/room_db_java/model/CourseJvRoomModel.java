@@ -3,7 +3,7 @@ package com.school.apicallskt.room_db_java.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "course_database_room")
+@Entity(tableName = "course_table_java")
 public class CourseJvRoomModel {
     @PrimaryKey(autoGenerate = true)
     private long id;

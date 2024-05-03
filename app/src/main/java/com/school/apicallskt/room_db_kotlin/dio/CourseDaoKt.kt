@@ -19,15 +19,15 @@ interface CourseDaoKt {
     @Delete
     fun delete(course: CourseRoomKtModel)
 
-    @Query("SELECT * FROM course_room_kt")
+   /* @Query("SELECT * FROM course_table_kotlin")
     fun getAllCourses(): List<CourseRoomKtModel>
 
-    @Query("SELECT * FROM course_room_kt WHERE id = :id")
+    @Query("SELECT * FROM course_table_kotlin WHERE id = :id")
     fun getCourseById(id: Long): CourseRoomKtModel?
 
-    @Query("UPDATE course_room_kt SET courseName = :courseName WHERE id = :id")
+    @Query("UPDATE course_table_kotlin SET courseName = :courseName WHERE id = :id")
     fun updateCourseName(id: Long, courseName: String)
 
-    @Query("DELETE FROM course_room_kt WHERE id = :id")
-    fun deleteCourse(id: Long)
+    @Query("DELETE FROM course_table_kotlin WHERE id = :id")
+    fun deleteCourse(id: Long)*/
 }

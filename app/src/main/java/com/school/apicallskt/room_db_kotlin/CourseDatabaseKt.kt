@@ -8,7 +8,7 @@ import com.school.apicallskt.room_db_kotlin.model.CourseRoomKtModel
 
 @Database(entities = [CourseRoomKtModel::class], version = 1)
 abstract class CourseDatabaseKt : RoomDatabase() {
-   // abstract fun CourseDao(): CourseDaoKt
+    abstract fun CourseDao(): CourseDaoKt
 
     companion object {
         @Volatile

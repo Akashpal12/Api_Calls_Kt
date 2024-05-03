@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".room_db_kotlin.TestRoomActivity"
+            android:exported="false" />
+        <activity
             android:name=".roomwithkotlin.RoomKtActivity"
             android:exported="false" />
         <activity
