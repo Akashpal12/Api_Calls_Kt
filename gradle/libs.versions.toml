@@ -15,6 +15,7 @@ retrofit = "2.9.0"
 roomRuntime = "2.6.1"
 volley = "1.2.1"
 
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
@@ -35,5 +36,6 @@ volley = { module = "com.android.volley:volley", version.ref = "volley" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidServices={ id = "com.google.gms.google-services", version.ref = "gService" }
+
 
 

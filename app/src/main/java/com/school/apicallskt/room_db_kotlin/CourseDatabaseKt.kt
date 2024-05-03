@@ -5,32 +5,25 @@ import androidx.room.RoomDatabase
 import com.school.apicallskt.room_db_kotlin.dio.CourseDaoKt
 import com.school.apicallskt.room_db_kotlin.model.CourseRoomKtModel
 
-@Database(entities = [CourseRoomKtModel::class], version = 1, exportSchema = false)
-abstract class CourseDatabaseKt : RoomDatabase() {
 
-    abstract fun courseDao(): CourseDaoKt
+@Database(entities = [CourseRoomKtModel::class], version = 1)
+abstract class CourseDatabaseKt : RoomDatabase() {
+   // abstract fun CourseDao(): CourseDaoKt
 
     companion object {
         @Volatile
-        private var instance: CourseDatabaseKt? = null
+        private var INSTANCE: CourseDatabaseKt? = null
 
-        fun getInstance(context: Context): CourseDatabaseKt {
-            return instance ?: synchronized(this) {
-                instance ?: try {
-                    buildDatabase(context).also { instance = it }
-                } catch (ex: Exception) {
-                    ex.printStackTrace()
-                    throw ex
-                }
+        fun getDatabase(context: Context): CourseDatabaseKt {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    CourseDatabaseKt::class.java,
+                    "course_room_kt"
+                ).build()
+                INSTANCE = instance
+                instance
             }
-        }
-        private fun buildDatabase(context: Context): CourseDatabaseKt {
-            return Room.databaseBuilder(
-                context.applicationContext,
-                CourseDatabaseKt::class.java,
-                "course_database"
-            ).fallbackToDestructiveMigration().allowMainThreadQueries()
-                .build()
         }
     }
 }

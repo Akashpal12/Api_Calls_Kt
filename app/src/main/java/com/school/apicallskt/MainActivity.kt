@@ -11,6 +11,7 @@ import com.school.apicallskt.retrofit_java.activity.PostJvActivity
 import com.school.apicallskt.retrofit_kotlin.activity.PostKTActivity
 import com.school.apicallskt.room_db_java.activity.RoomActivity
 import com.school.apicallskt.room_db_kotlin.RoomDbKtActivity
+import com.school.apicallskt.roomwithkotlin.RoomKtActivity
 import com.school.apicallskt.sqLite_java.activity.SqLiteJvActivity
 import com.school.apicallskt.sqLite_kotlin.activity.SqLiteKtActivity
 import com.school.apicallskt.volley_kotlin.activity.VolleyPostKtActivity
@@ -60,6 +61,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.roomDbKt.setOnClickListener {
+            val intent=Intent(this,
+                RoomKtActivity::class.java)
+            startActivity(intent)
+        }
+        binding.roomF.setOnClickListener {
             val intent=Intent(this,
                 RoomDbKtActivity::class.java)
             startActivity(intent)

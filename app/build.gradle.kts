@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.androidServices)
-
+    id ("kotlin-kapt")
 }
 
 android {
@@ -58,13 +58,12 @@ dependencies {
     //Room Db
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
-
+    // important for kotlin roomdb
+    kapt(libs.androidx.room.compiler)
     // firebase
     implementation(platform(libs.firebase.bom))
 
-    //firebase realtime database
-    //noinspection UseTomlInstead
-    implementation("com.google.firebase:firebase-database")
+
 
 
 }

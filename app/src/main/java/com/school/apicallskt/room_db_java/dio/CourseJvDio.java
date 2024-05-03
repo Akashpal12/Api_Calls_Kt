@@ -13,15 +13,17 @@ public interface CourseJvDio {
     @Insert
     void insert(CourseJvRoomModel course);
 
-    @Query("SELECT * FROM CourseJvRoomModel")
+    @Query("SELECT * FROM course_database_room")
     List<CourseJvRoomModel> getAllCourses();
 
-    @Query("SELECT * FROM CourseJvRoomModel WHERE id = :id")
+    @Query("SELECT * FROM course_database_room WHERE id = :id")
     CourseJvRoomModel getCourseById(long id);
 
-    @Query("UPDATE CourseJvRoomModel SET courseName = :newName WHERE id = :id")
+    @Query("UPDATE course_database_room SET courseName = :newName WHERE id = :id")
     void updateCourseName(long id, String newName);
 
-    @Query("DELETE FROM CourseJvRoomModel WHERE id = :id")
+    @Query("DELETE FROM course_database_room WHERE id = :id")
     void deleteCourse(long id);
+
+
 }

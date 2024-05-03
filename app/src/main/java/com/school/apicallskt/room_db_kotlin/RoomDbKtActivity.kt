@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.school.apicallskt.R
 import com.school.apicallskt.databinding.ActivityRoomDbKtBinding
+import com.school.apicallskt.room_db_kotlin.dio.CourseDaoKt
 import com.school.apicallskt.room_db_kotlin.model.CourseRoomKtModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -17,13 +18,13 @@ import kotlinx.coroutines.launch
 class RoomDbKtActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRoomDbKtBinding
     private lateinit var courseDatabase: CourseDatabaseKt
+    private lateinit var courseDao:CourseDaoKt
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        enableEdgeToEdge()
         binding = ActivityRoomDbKtBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        enableEdgeToEdge()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -31,9 +32,10 @@ class RoomDbKtActivity : AppCompatActivity() {
             insets
         }
 
-        courseDatabase = CourseDatabaseKt.getInstance(this)
+        courseDatabase = CourseDatabaseKt.getDatabase(application)
+       // courseDao=courseDatabase.CourseDao()
 
-        binding.idBtnAddCourse.setOnClickListener {
+        /*binding.idBtnAddCourse.setOnClickListener {
             val courseName = binding.idEdtCourseName.text.toString().trim()
             val courseTracks = binding.idEdtCourseTracks.text.toString().trim()
             val courseDuration = binding.idEdtCourseDuration.text.toString().trim()
@@ -68,6 +70,6 @@ class RoomDbKtActivity : AppCompatActivity() {
                     binding.idEdtCourseDescription.text.clear()
                 }
             }
-        }
+        }*/
     }
 }

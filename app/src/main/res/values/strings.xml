@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Api Calls Kt</string>
+    <!--SharedPreferences keystore-->
+    <string name="MySharedPrefJv">MySharedPrefJv</string>
+    <string name="MySharedPrefKt">MySharedPrefKt</string>
+    <string name="string">string</string>
 </resources>

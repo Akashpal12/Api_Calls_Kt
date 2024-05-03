@@ -3,13 +3,12 @@ package com.school.apicallskt.room_db_kotlin.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "course_room_kt")
 data class CourseRoomKtModel(
-    var courseName: String? = null,
-    var courseDuration: String? = null,
-    var courseTracks: String? = null,
-    var courseDescription: String? = null
-) {
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
-}
+    val id: Int =0,
+    val courseName: String?=null,
+    val courseDuration: String?=null,
+    val courseTracks: String?=null,
+    val courseDescription: String?=null
+)
