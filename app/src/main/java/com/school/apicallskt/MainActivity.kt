@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.school.apicallskt.databinding.ActivityMainBinding
+import com.school.apicallskt.firebase_java.real_time_database.RealTimeDbJava
 import com.school.apicallskt.retrofit_java.activity.PostJvActivity
 import com.school.apicallskt.retrofit_kotlin.activity.PostKTActivity
 import com.school.apicallskt.room_db_java.activity.RoomActivity
@@ -19,6 +20,7 @@ import com.school.apicallskt.volley_kotlin.activity.VolleyPostKtActivity
 
 class MainActivity : AppCompatActivity() {
       lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +72,12 @@ class MainActivity : AppCompatActivity() {
             val intent=Intent(this,
                 //RoomDbKtActivity::class.java)
                 TestRoomActivity::class.java)
+            startActivity(intent)
+        }
+        binding.firebaseRealtimeDb.setOnClickListener {
+            val intent=Intent(this,
+                //RoomDbKtActivity::class.java)
+                RealTimeDbJava::class.java)
             startActivity(intent)
         }
     }

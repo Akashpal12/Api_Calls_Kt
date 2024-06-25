@@ -14,6 +14,7 @@ constraintlayout = "2.1.4"
 retrofit = "2.9.0"
 roomRuntime = "2.6.1"
 volley = "1.2.1"
+firebaseDatabase = "21.0.0"
 
 
 [libraries]
@@ -31,6 +32,7 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 volley = { module = "com.android.volley:volley", version.ref = "volley" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

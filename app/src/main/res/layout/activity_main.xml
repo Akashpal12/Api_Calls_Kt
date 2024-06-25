@@ -4,84 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Api Calling in Kotline and Java"
-        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/kotlin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text=" Retrofit Kotlin Apis"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/java"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text=" Retrofit Java Apis"
-       />
 
-    <Button
-        android:id="@+id/v_java"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text=" Volley Java Apis"
-        />
- <Button
-        android:id="@+id/v_kotlin"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text=" Volley Kotlin Apis"
-        />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Api Calling in Kotline and Java"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/Sq_lite_java"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text="Sq Lite Java"
-        />
-    <Button
-        android:id="@+id/Sq_lite_kt"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text="Sq Lite Kotlin"
-        />
-    <Button
-        android:id="@+id/room_db_jv"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text="Room Database Java"
-        />
-    <Button
-        android:id="@+id/room_db_kt"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text="Room Database Kotlin"
-        />
-    <Button
-        android:id="@+id/room_f"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text="Room Database K Final"
-        />
+            <Button
+                android:id="@+id/kotlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=" Retrofit Kotlin Apis"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=" Retrofit Java Apis" />
+
+            <Button
+                android:id="@+id/v_java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=" Volley Java Apis" />
+
+            <Button
+                android:id="@+id/v_kotlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=" Volley Kotlin Apis" />
+
+            <Button
+                android:id="@+id/Sq_lite_java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sq Lite Java" />
+
+            <Button
+                android:id="@+id/Sq_lite_kt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sq Lite Kotlin" />
+
+            <Button
+                android:id="@+id/room_db_jv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Room Database Java" />
+
+            <Button
+                android:id="@+id/room_db_kt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Room Database Kotlin" />
+
+            <Button
+                android:id="@+id/room_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Room Database K Final" />
+
+            <Button
+                android:id="@+id/firebase_realtimeDb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="FirebaseRealtimeDb" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

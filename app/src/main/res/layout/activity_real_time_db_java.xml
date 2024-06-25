@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".firebase_java.real_time_database.RealTimeDbJava">
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4A148C"
+        android:textAlignment="center"
+        android:title="Firebase Real Time Firbase"
+        android:titleTextColor="@color/white">
+    </Toolbar>
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Add Record"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

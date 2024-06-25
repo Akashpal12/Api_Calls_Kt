@@ -32,7 +32,7 @@ class RoomDbKtActivity : AppCompatActivity() {
             insets
         }
 
-        courseDatabase = CourseDatabaseKt.getDatabase(application)
+        courseDatabase = CourseDatabaseKt.getDatabase(this)
        // courseDao=courseDatabase.CourseDao()
 
         /*binding.idBtnAddCourse.setOnClickListener {

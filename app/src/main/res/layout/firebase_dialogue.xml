@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#F6F4F4"
+    android:clickable="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please Enter Name"
+            app:boxStrokeColor="#F10202">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Please Enter Age"
+            app:boxStrokeColor="#F10202">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ageName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="Camera"
+                android:letterSpacing="0"
+                android:textAllCaps="false"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:backgroundTint="#006064"
+                style="@style/Widget.MaterialComponents.Button"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:letterSpacing="0"
+                android:backgroundTint="#006064"
+                style="@style/Widget.MaterialComponents.Button"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:letterSpacing="0"
+            android:backgroundTint="#006064"
+            style="@style/Widget.MaterialComponents.Button"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
