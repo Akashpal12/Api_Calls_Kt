@@ -45,6 +45,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <ImageView
+            android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="5dp" />
@@ -54,6 +55,7 @@
             android:weightSum="2"
             android:layout_height="wrap_content">
             <Button
+                android:id="@+id/openCam"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:text="Camera"
@@ -65,6 +67,7 @@
                 android:backgroundTint="#006064"
                 style="@style/Widget.MaterialComponents.Button"/>
             <Button
+                android:id="@+id/openGallery"
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="10dp"
