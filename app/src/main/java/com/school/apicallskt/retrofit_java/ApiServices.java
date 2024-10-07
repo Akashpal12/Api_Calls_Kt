@@ -10,6 +10,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiServices {
     @GET("posts")
@@ -23,5 +24,12 @@ public interface ApiServices {
 
     @GET("posts/{id}/comments")
     Call<List<CommentsModel>>getComments(@Path("id") int id);
+
+    @GET("repositories/1300192/issues")
+    Call<JsonArray> getIssues(
+            @Query("page") int page
+    );
+
+
 
 }

@@ -19,4 +19,5 @@ interface YourDao {
      fun delete(entity: YourEntity)
 
 
+
 }

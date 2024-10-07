@@ -101,8 +101,6 @@ public class RealTimeDbJava extends AppCompatActivity {
             dialogBinding.openGallery.setOnClickListener(v1 -> {
 
             });
-
-
         });
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -122,7 +120,6 @@ public class RealTimeDbJava extends AppCompatActivity {
             }
         });
     }
-
     void captureImage() {
         try {
             Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
